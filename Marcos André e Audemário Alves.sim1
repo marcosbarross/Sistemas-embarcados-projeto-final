@@ -14,38 +14,62 @@
 
 <item itemtype="Probe" CircId="Probe-380" mainComp="false" Show_id="false" Show_Val="true" Pos="92,228" rotation="-45" hflip="1" vflip="1" label="Probe-380" idLabPos="16,-16" labelrot="45" valLabPos="16,0" valLabRot="45" ShowVolt="true" Threshold="2.5 V" />
 
+<item itemtype="DcMotor" CircId="DcMotor-397" mainComp="false" Show_id="true" Show_Val="false" Pos="12,-4" rotation="450" hflip="1" vflip="1" label="DcMotor-397" idLabPos="-22,-48" labelrot="0" valLabPos="-14,36" valLabRot="0" RPM_Nominal="60 _RPM" Volt_Nominal="5 V" Resistance="100 Ω" />
+
+<item itemtype="Subcircuit" CircId="L293-403" mainComp="false" Show_id="true" Show_Val="false" Pos="124,-40" rotation="360" hflip="1" vflip="1" label="L293-403" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" Logic_Symbol="false" />
+
+<item itemtype="Potentiometer" CircId="Potentiometer-458" mainComp="false" ShowProp="Resistance" Show_id="false" Show_Val="true" Pos="188,84" rotation="0" hflip="1" vflip="1" label="Potentiometer-458" idLabPos="-16,-40" labelrot="0" valLabPos="15,-20" valLabRot="0" Resistance="1000 Ω" Value_Ohm="997 Ω" />
+
+<item itemtype="Rail" CircId="Rail-463" mainComp="false" ShowProp="Voltage" Show_id="false" Show_Val="true" Pos="116,84" rotation="0" hflip="1" vflip="1" label="Rail-463" idLabPos="-16,-24" labelrot="0" valLabPos="-16,8" valLabRot="0" Voltage="5 V" />
+
 <item itemtype="Node" CircId="Node-354" mainComp="false" Pos="16,244" />
 
-<item itemtype="Connector" uid="connector-361" startpinid="BcdTo7S-322-out0" endpinid="Seven Segment-325-pin_a" pointList="36,120,92,120" />
+<item itemtype="Connector" uid="connector-436" startpinid="BcdTo7S-322-out0" endpinid="Seven Segment-325-pin_a" pointList="36,120,92,120" />
 
-<item itemtype="Connector" uid="connector-362" startpinid="BcdTo7S-322-out1" endpinid="Seven Segment-325-pin_b" pointList="36,128,92,128" />
+<item itemtype="Connector" uid="connector-437" startpinid="BcdTo7S-322-out1" endpinid="Seven Segment-325-pin_b" pointList="36,128,92,128" />
 
-<item itemtype="Connector" uid="connector-363" startpinid="BcdTo7S-322-out2" endpinid="Seven Segment-325-pin_c" pointList="36,136,92,136" />
+<item itemtype="Connector" uid="connector-438" startpinid="BcdTo7S-322-out2" endpinid="Seven Segment-325-pin_c" pointList="36,136,92,136" />
 
-<item itemtype="Connector" uid="connector-364" startpinid="BcdTo7S-322-out3" endpinid="Seven Segment-325-pin_d" pointList="36,144,92,144" />
+<item itemtype="Connector" uid="connector-439" startpinid="BcdTo7S-322-out3" endpinid="Seven Segment-325-pin_d" pointList="36,144,92,144" />
 
-<item itemtype="Connector" uid="connector-365" startpinid="BcdTo7S-322-out4" endpinid="Seven Segment-325-pin_e" pointList="36,152,92,152" />
+<item itemtype="Connector" uid="connector-440" startpinid="BcdTo7S-322-out4" endpinid="Seven Segment-325-pin_e" pointList="36,152,92,152" />
 
-<item itemtype="Connector" uid="connector-366" startpinid="BcdTo7S-322-out5" endpinid="Seven Segment-325-pin_f" pointList="36,160,92,160" />
+<item itemtype="Connector" uid="connector-441" startpinid="BcdTo7S-322-out5" endpinid="Seven Segment-325-pin_f" pointList="36,160,92,160" />
 
-<item itemtype="Connector" uid="connector-367" startpinid="BcdTo7S-322-out6" endpinid="Seven Segment-325-pin_g" pointList="36,168,92,168" />
+<item itemtype="Connector" uid="connector-442" startpinid="BcdTo7S-322-out6" endpinid="Seven Segment-325-pin_g" pointList="36,168,92,168" />
 
-<item itemtype="Connector" uid="connector-368" startpinid="Uno-272-1" endpinid="BcdTo7S-322-in3" pointList="-68,160,-12,160" />
+<item itemtype="Connector" uid="connector-443" startpinid="Uno-272-1" endpinid="BcdTo7S-322-in3" pointList="-68,160,-12,160" />
 
-<item itemtype="Connector" uid="connector-369" startpinid="Uno-272-2" endpinid="BcdTo7S-322-in2" pointList="-68,152,-12,152" />
+<item itemtype="Connector" uid="connector-444" startpinid="Uno-272-2" endpinid="BcdTo7S-322-in2" pointList="-68,152,-12,152" />
 
-<item itemtype="Connector" uid="connector-370" startpinid="Uno-272-3" endpinid="BcdTo7S-322-in1" pointList="-68,144,-12,144" />
+<item itemtype="Connector" uid="connector-445" startpinid="Uno-272-3" endpinid="BcdTo7S-322-in1" pointList="-68,144,-12,144" />
 
-<item itemtype="Connector" uid="connector-371" startpinid="Uno-272-4" endpinid="BcdTo7S-322-in0" pointList="-68,136,-12,136" />
+<item itemtype="Connector" uid="connector-446" startpinid="Uno-272-4" endpinid="BcdTo7S-322-in0" pointList="-68,136,-12,136" />
 
-<item itemtype="Connector" uid="connector-372" startpinid="Uno-272-GND2" endpinid="Resistor-348-lPin" pointList="-132,168,-160,168,-160,244,-40,244" />
+<item itemtype="Connector" uid="connector-447" startpinid="Uno-272-GND2" endpinid="Resistor-348-lPin" pointList="-132,168,-160,168,-160,244,-40,244" />
 
-<item itemtype="Connector" uid="connector-373" startpinid="Resistor-348-rPin" endpinid="Node-354-0" pointList="-8,244,16,244" />
+<item itemtype="Connector" uid="connector-448" startpinid="Resistor-348-rPin" endpinid="Node-354-0" pointList="-8,244,16,244" />
 
-<item itemtype="Connector" uid="connector-374" startpinid="Uno-272-0" endpinid="Push-351-pinP0" pointList="-68,168,-68,204,-44,204" />
+<item itemtype="Connector" uid="connector-449" startpinid="Uno-272-0" endpinid="Push-351-pinP0" pointList="-68,168,-68,204,-44,204" />
 
-<item itemtype="Connector" uid="connector-375" startpinid="Push-351-switch0pinN" endpinid="Node-354-1" pointList="-12,204,16,204,16,244" />
+<item itemtype="Connector" uid="connector-450" startpinid="Push-351-switch0pinN" endpinid="Node-354-1" pointList="-12,204,16,204,16,244" />
 
-<item itemtype="Connector" uid="connector-376" startpinid="Node-354-2" endpinid="Seven Segment-325-pin_commona" pointList="16,244,124,244,124,176" />
+<item itemtype="Connector" uid="connector-452" startpinid="L293-403-1Y" endpinid="DcMotor-397-lPin" pointList="116,-16,64,-16,64,-60,12,-60,12,-44" />
+
+<item itemtype="Connector" uid="connector-453" startpinid="L293-403-2Y" endpinid="DcMotor-397-rPin" pointList="116,8,64,8,64,52,12,52,12,36" />
+
+<item itemtype="Connector" uid="connector-454" startpinid="L293-403-1A" endpinid="Uno-272-8" pointList="116,-24,76,-24,76,-72,-44,-72,-44,104,-68,104" />
+
+<item itemtype="Connector" uid="connector-455" startpinid="L293-403-12EN" endpinid="Uno-272-9" pointList="116,-32,84,-32,84,-80,-56,-80,-56,96,-68,96" />
+
+<item itemtype="Connector" uid="connector-456" startpinid="L293-403-2A" endpinid="Uno-272-5" pointList="116,16,88,16,88,96,-28,96,-28,128,-68,128" />
+
+<item itemtype="Connector" uid="Connector-459" startpinid="Potentiometer-458-PinM" endpinid="Uno-272-A0" pointList="188,100,188,112,56,112,56,56,-68,56" />
+
+<item itemtype="Connector" uid="Connector-464" startpinid="Rail-463-outnod" endpinid="Potentiometer-458-PinA" pointList="132,84,172,84" />
+
+<item itemtype="Connector" uid="connector-451" startpinid="Node-354-2" endpinid="Seven Segment-325-pin_commona" pointList="16,244,124,244,124,176" />
+
+<item itemtype="Connector" uid="Connector-465" startpinid="Potentiometer-458-PinB" endpinid="Uno-272-GND1" pointList="204,84,252,84,252,276,-208,276,-208,160,-132,160" />
 
 </circuit>

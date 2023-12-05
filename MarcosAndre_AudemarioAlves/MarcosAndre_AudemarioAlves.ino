@@ -1,8 +1,14 @@
-const int S0 = 4;    // Pino S0 do BCD conectado ao pino 4 do Arduino
-const int S1 = 3;    // Pino S1 do BCD conectado ao pino 3 do Arduino
-const int S2 = 2;    // Pino S2 do BCD conectado ao pino 2 do Arduino
-const int S3 = 1;    // Pino S3 do BCD conectado ao pino 1 do Arduino
-const int buttonPin = 0;  // Pino do botão conectado ao pino 0 do Arduino
+const int S0 = 4;
+const int S1 = 3;
+const int S2 = 2;
+const int S3 = 1;
+const int buttonPin = 0;
+
+const int toggleSwitch = 11;
+const int motorTerminal1 = 5;
+const int motorTerminal2 = 8;
+const int enablePin = 9;
+const int potPin = A0;
 
 int numeroAtual = 0;
 bool botaoPressionado = false;
@@ -13,21 +19,46 @@ void setup() {
   pinMode(S2, OUTPUT);
   pinMode(S3, OUTPUT);
   pinMode(buttonPin, INPUT_PULLUP);
+
+  pinMode(motorTerminal1, OUTPUT);
+  pinMode(motorTerminal2, OUTPUT);
+  pinMode(enablePin, OUTPUT);
+
+  pinMode(potPin, INPUT);
+
+  digitalWrite(enablePin, HIGH);
+
+  Serial.begin(9600);
 }
 
 void loop() {
+  int potValue = analogRead(potPin);
+  Serial.println(potValue);
+
+  delay(50);  // Adiciona um pequeno atraso para evitar leituras muito rápidas
+
+  if (potValue > 600) {
+    // Sentido horário
+    digitalWrite(motorTerminal1, LOW);
+    digitalWrite(motorTerminal2, HIGH);
+  } else {
+    // Sentido anti-horário
+    digitalWrite(motorTerminal1, HIGH);
+    digitalWrite(motorTerminal2, LOW);
+  }
+
   if (digitalRead(buttonPin) == LOW && !botaoPressionado) {
     botaoPressionado = true;
-    // Incrementa o número e o exibe
-    numeroAtual = (numeroAtual + 1) % 4;  // 4 é o número máximo
+    numeroAtual = (numeroAtual + 1) % 4;
     exibirNumero(numeroAtual);
   } else if (digitalRead(buttonPin) == HIGH) {
     botaoPressionado = false;
   }
+
+  // Resto do código...
 }
 
 void exibirNumero(int numero) {
-  // Configura as entradas BCD para o número desejado
   digitalWrite(S0, bitRead(numero, 0));
   digitalWrite(S1, bitRead(numero, 1));
   digitalWrite(S2, bitRead(numero, 2));
