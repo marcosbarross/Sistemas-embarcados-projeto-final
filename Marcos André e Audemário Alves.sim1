@@ -1,35 +1,51 @@
 <circuit version="1.0.0-SR1" rev="1402" stepSize="1000000" stepsPS="1000000" NLsteps="100000" reaStep="1000000" animate="0" >
 
-<item itemtype="Subcircuit" CircId="L293-268" mainComp="false" Show_id="true" Show_Val="false" Pos="564,152" rotation="0" hflip="1" vflip="1" label="L293-268" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" Logic_Symbol="true" />
-
-<item itemtype="Subcircuit" CircId="Uno-272" mainComp="false" Show_id="true" Show_Val="false" Pos="340,152" rotation="0" hflip="1" vflip="1" label="Uno-272" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" Logic_Symbol="true">
+<item itemtype="Subcircuit" CircId="Uno-272" mainComp="false" Show_id="true" Show_Val="false" Pos="-124,8" rotation="0" hflip="1" vflip="1" label="Uno-272" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" Logic_Symbol="true">
 <mainCompProps itemtype="MCU" CircId="272_mega328-109" mainComp="true" Show_id="false" Show_Val="false" Pos="20,20" rotation="0" hflip="1" vflip="1" label="272_mega328-109" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" Frequency="16 MHz" Program="MarcosAndre_AudemarioAlves/build/arduino.avr.uno/MarcosAndre_AudemarioAlves.ino.with_bootloader.hex" Auto_Load="false" Rst_enabled="true" Ext_Osc="true" Wdt_enabled="false" />
 </item>
 
-<item itemtype="DcMotor" CircId="DcMotor-275" mainComp="false" Show_id="true" Show_Val="false" Pos="692,136" rotation="360" hflip="1" vflip="1" label="DcMotor-275" idLabPos="-22,-48" labelrot="0" valLabPos="-14,36" valLabRot="0" RPM_Nominal="60 _RPM" Volt_Nominal="5 V" Resistance="100 Ω" />
+<item itemtype="BcdTo7S" CircId="BcdTo7S-322" mainComp="false" Show_id="false" Show_Val="false" Pos="12,144" rotation="0" hflip="1" vflip="1" label="BcdTo7S-322" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Inverted="false" Input_High_V="2.5 V" Input_Low_V="2.5 V" Input_Imped="1000 MΩ" Out_High_V="5 V" Out_Low_V="0 V" Out_Imped="40 Ω" Tpd_ps="10000 ps" Tr_ps="3000 ps" Tf_ps="4000 ps" />
 
-<item itemtype="Potentiometer" CircId="Potentiometer-278" mainComp="false" ShowProp="Resistance" Show_id="false" Show_Val="true" Pos="276,272" rotation="0" hflip="1" vflip="1" label="Potentiometer-278" idLabPos="-16,-40" labelrot="0" valLabPos="15,-20" valLabRot="0" Resistance="1000 Ω" Value_Ohm="842 Ω" />
+<item itemtype="Seven Segment" CircId="Seven Segment-325" mainComp="false" Show_id="false" Show_Val="false" Pos="116,144" rotation="0" hflip="1" vflip="1" label="Seven Segment-325" idLabPos="20,-44" labelrot="0" valLabPos="-16,20" valLabRot="0" NumDisplays="1 _7seg" Color="Yellow" Vertical_Pins="false" CommonCathode="true" Threshold="2.4 V" MaxCurrent="0.02 A" Resistance="1 Ω" />
 
-<item itemtype="Probe" CircId="Probe-298" mainComp="false" Show_id="false" Show_Val="true" Pos="640,120" rotation="-45" hflip="1" vflip="1" label="Probe-298" idLabPos="16,-16" labelrot="45" valLabPos="16,0" valLabRot="45" ShowVolt="true" Threshold="2.5 V" />
+<item itemtype="Resistor" CircId="Resistor-348" mainComp="false" ShowProp="Resistance" Show_id="false" Show_Val="true" Pos="-24,244" rotation="0" hflip="1" vflip="1" label="Resistor-348" idLabPos="-16,-24" labelrot="0" valLabPos="-16,6" valLabRot="0" Resistance="100 Ω" />
 
-<item itemtype="Probe" CircId="Probe-305" mainComp="false" Show_id="false" Show_Val="true" Pos="504,152" rotation="-45" hflip="1" vflip="1" label="Probe-305" idLabPos="16,-16" labelrot="45" valLabPos="16,0" valLabRot="45" ShowVolt="true" Threshold="2.5 V" />
+<item itemtype="Push" CircId="Push-351" mainComp="false" Show_id="false" Show_Val="false" Pos="-28,204" rotation="0" hflip="1" vflip="1" label="Push-351" idLabPos="-12,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Norm_Close="false" Poles="1 _Poles" />
 
-<item itemtype="Probe" CircId="Probe-306" mainComp="false" Show_id="false" Show_Val="true" Pos="764,120" rotation="-45" hflip="1" vflip="1" label="Probe-306" idLabPos="16,-16" labelrot="45" valLabPos="16,0" valLabRot="45" ShowVolt="true" Threshold="2.5 V" />
+<item itemtype="Probe" CircId="Probe-380" mainComp="false" Show_id="false" Show_Val="true" Pos="92,228" rotation="-45" hflip="1" vflip="1" label="Probe-380" idLabPos="16,-16" labelrot="45" valLabPos="16,0" valLabRot="45" ShowVolt="true" Threshold="2.5 V" />
 
-<item itemtype="Probe" CircId="Probe-314" mainComp="false" Show_id="false" Show_Val="true" Pos="448,144" rotation="-45" hflip="1" vflip="1" label="Probe-314" idLabPos="16,-16" labelrot="45" valLabPos="16,0" valLabRot="45" ShowVolt="true" Threshold="2.5 V" />
+<item itemtype="Node" CircId="Node-354" mainComp="false" Pos="16,244" />
 
-<item itemtype="Connector" uid="Connector-293" startpinid="Uno-272-A5" endpinid="L293-268-1A" pointList="396,160,556,160" />
+<item itemtype="Connector" uid="connector-361" startpinid="BcdTo7S-322-out0" endpinid="Seven Segment-325-pin_a" pointList="36,120,92,120" />
 
-<item itemtype="Connector" uid="Connector-294" startpinid="Uno-272-A4" endpinid="L293-268-2A" pointList="396,168,556,168" />
+<item itemtype="Connector" uid="connector-362" startpinid="BcdTo7S-322-out1" endpinid="Seven Segment-325-pin_b" pointList="36,128,92,128" />
 
-<item itemtype="Connector" uid="Connector-297" startpinid="L293-268-2Y" endpinid="DcMotor-275-rPin" pointList="604,168,620,168,620,180,764,180,764,136,732,136" />
+<item itemtype="Connector" uid="connector-363" startpinid="BcdTo7S-322-out2" endpinid="Seven Segment-325-pin_c" pointList="36,136,92,136" />
 
-<item itemtype="Connector" uid="Connector-302" startpinid="Uno-272-5V0" endpinid="Potentiometer-278-PinB" pointList="332,272,292,272" />
+<item itemtype="Connector" uid="connector-364" startpinid="BcdTo7S-322-out3" endpinid="Seven Segment-325-pin_d" pointList="36,144,92,144" />
 
-<item itemtype="Connector" uid="Connector-303" startpinid="Potentiometer-278-PinA" endpinid="Uno-272-GND0" pointList="260,272,244,272,244,296,332,296" />
+<item itemtype="Connector" uid="connector-365" startpinid="BcdTo7S-322-out4" endpinid="Seven Segment-325-pin_e" pointList="36,152,92,152" />
 
-<item itemtype="Connector" uid="Connector-304" startpinid="Potentiometer-278-PinM" endpinid="Uno-272-A0" pointList="276,288,276,340,452,340,452,200,396,200" />
+<item itemtype="Connector" uid="connector-366" startpinid="BcdTo7S-322-out5" endpinid="Seven Segment-325-pin_f" pointList="36,160,92,160" />
 
-<item itemtype="Connector" uid="Connector-295" startpinid="L293-268-1Y" endpinid="DcMotor-275-lPin" pointList="604,160,620,160,620,136,652,136" />
+<item itemtype="Connector" uid="connector-367" startpinid="BcdTo7S-322-out6" endpinid="Seven Segment-325-pin_g" pointList="36,168,92,168" />
+
+<item itemtype="Connector" uid="connector-368" startpinid="Uno-272-1" endpinid="BcdTo7S-322-in3" pointList="-68,160,-12,160" />
+
+<item itemtype="Connector" uid="connector-369" startpinid="Uno-272-2" endpinid="BcdTo7S-322-in2" pointList="-68,152,-12,152" />
+
+<item itemtype="Connector" uid="connector-370" startpinid="Uno-272-3" endpinid="BcdTo7S-322-in1" pointList="-68,144,-12,144" />
+
+<item itemtype="Connector" uid="connector-371" startpinid="Uno-272-4" endpinid="BcdTo7S-322-in0" pointList="-68,136,-12,136" />
+
+<item itemtype="Connector" uid="connector-372" startpinid="Uno-272-GND2" endpinid="Resistor-348-lPin" pointList="-132,168,-160,168,-160,244,-40,244" />
+
+<item itemtype="Connector" uid="connector-373" startpinid="Resistor-348-rPin" endpinid="Node-354-0" pointList="-8,244,16,244" />
+
+<item itemtype="Connector" uid="connector-374" startpinid="Uno-272-0" endpinid="Push-351-pinP0" pointList="-68,168,-68,204,-44,204" />
+
+<item itemtype="Connector" uid="connector-375" startpinid="Push-351-switch0pinN" endpinid="Node-354-1" pointList="-12,204,16,204,16,244" />
+
+<item itemtype="Connector" uid="connector-376" startpinid="Node-354-2" endpinid="Seven Segment-325-pin_commona" pointList="16,244,124,244,124,176" />
 
 </circuit>

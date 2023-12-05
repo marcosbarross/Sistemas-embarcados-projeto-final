@@ -1,28 +1,35 @@
-const int potPin = A0;
-const int motorPin1 = A5;
-const int motorPin2 = A4;
+const int S0 = 4;    // Pino S0 do BCD conectado ao pino 4 do Arduino
+const int S1 = 3;    // Pino S1 do BCD conectado ao pino 3 do Arduino
+const int S2 = 2;    // Pino S2 do BCD conectado ao pino 2 do Arduino
+const int S3 = 1;    // Pino S3 do BCD conectado ao pino 1 do Arduino
+const int buttonPin = 0;  // Pino do botão conectado ao pino 0 do Arduino
+
+int numeroAtual = 0;
+bool botaoPressionado = false;
 
 void setup() {
-  pinMode(potPin, INPUT);
-  pinMode(motorPin1, OUTPUT);
-  pinMode(motorPin2, OUTPUT);
+  pinMode(S0, OUTPUT);
+  pinMode(S1, OUTPUT);
+  pinMode(S2, OUTPUT);
+  pinMode(S3, OUTPUT);
+  pinMode(buttonPin, INPUT_PULLUP);
 }
 
 void loop() {
-  int potValue = analogRead(potPin);
-  int motorSpeed = map(potValue, 0, 1000, 0, 250);
-
-  if (potValue < 512) {
-    // Sentido horário
-    digitalWrite(motorPin1, HIGH);
-    digitalWrite(motorPin2, LOW);
-  } else {
-    // Sentido anti-horário
-    digitalWrite(motorPin1, LOW);
-    digitalWrite(motorPin2, HIGH);
+  if (digitalRead(buttonPin) == LOW && !botaoPressionado) {
+    botaoPressionado = true;
+    // Incrementa o número e o exibe
+    numeroAtual = (numeroAtual + 1) % 4;  // 4 é o número máximo
+    exibirNumero(numeroAtual);
+  } else if (digitalRead(buttonPin) == HIGH) {
+    botaoPressionado = false;
   }
+}
 
-  // Controlando a velocidade do motor
-  analogWrite(motorPin1, motorSpeed);
-  analogWrite(motorPin2, motorSpeed);
+void exibirNumero(int numero) {
+  // Configura as entradas BCD para o número desejado
+  digitalWrite(S0, bitRead(numero, 0));
+  digitalWrite(S1, bitRead(numero, 1));
+  digitalWrite(S2, bitRead(numero, 2));
+  digitalWrite(S3, bitRead(numero, 3));
 }
