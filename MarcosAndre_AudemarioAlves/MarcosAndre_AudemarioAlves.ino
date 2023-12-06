@@ -49,8 +49,13 @@ void loop() {
 
   if (digitalRead(buttonPin) == LOW && !botaoPressionado) {
     botaoPressionado = true;
-    numeroAtual = (numeroAtual + 1) % 4;
-    exibirNumero(numeroAtual);
+      if numeroAtual <= 3{
+      numeroAtual = (numeroAtual + 1) % 4;
+      exibirNumero(numeroAtual);
+      }
+      else{
+        numeroAtual = 0;
+      }
   } else if (digitalRead(buttonPin) == HIGH) {
     botaoPressionado = false;
   }
