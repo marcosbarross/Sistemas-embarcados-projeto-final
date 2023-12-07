@@ -1,3 +1,5 @@
+#include <Servo.h>
+
 const int S0 = 4;
 const int S1 = 3;
 const int S2 = 2;
@@ -9,12 +11,14 @@ const int motorTerminal1 = 5;
 const int motorTerminal2 = 8;
 const int enablePin = 9;
 const int potPin = A0;
+const int servoPin = A5;
 
 int potValue;
 int numeroAtual = 0;
 bool botaoPressionado = false;
+Servo servoMotor;
 
-void incremetar(){
+void incremetar() {
   if (digitalRead(buttonPin) == LOW && !botaoPressionado) {
     botaoPressionado = true;
     numeroAtual = (numeroAtual + 1) % 4;
@@ -26,19 +30,25 @@ void incremetar(){
 void controlarMotorDC(int iniciador) {
   if (iniciador == 1) {
     if (potValue > 90) {
+      digitalWrite(motorTerminal1, LOW);  // Invertendo a direção
+      digitalWrite(motorTerminal2, HIGH); 
+    } else {
       digitalWrite(motorTerminal1, HIGH);
       digitalWrite(motorTerminal2, LOW);
-    } else {
-      digitalWrite(motorTerminal1, LOW);
-      digitalWrite(motorTerminal2, HIGH);
     }
-  }
-  else{
+  } else {
     digitalWrite(motorTerminal1, LOW);
     digitalWrite(motorTerminal2, LOW);
   }
 }
 
+void controlarServoMotor(int iniciador){
+  if(iniciador == 2){
+    // Define o ângulo do servo motor com base no valor do potenciômetro
+    int servoAngle = 180 - potValue;
+    servoMotor.write(servoAngle);
+  }
+}
 
 void exibirNumero(int numero) {
   digitalWrite(S0, bitRead(numero, 0));
@@ -60,6 +70,8 @@ void setup() {
 
   pinMode(potPin, INPUT);
   digitalWrite(enablePin, HIGH);
+
+  servoMotor.attach(servoPin);  // Anexar o servo motor ao pino especificado
 }
 
 void loop() {
@@ -69,5 +81,6 @@ void loop() {
   delay(50);
   incremetar();
   controlarMotorDC(numeroAtual);
+  controlarServoMotor(numeroAtual);
   exibirNumero(numeroAtual);
 }
