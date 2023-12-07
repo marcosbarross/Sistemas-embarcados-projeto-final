@@ -10,8 +10,42 @@ const int motorTerminal2 = 8;
 const int enablePin = 9;
 const int potPin = A0;
 
+int potValue;
 int numeroAtual = 0;
 bool botaoPressionado = false;
+
+void incremetar(){
+  if (digitalRead(buttonPin) == LOW && !botaoPressionado) {
+    botaoPressionado = true;
+    numeroAtual = (numeroAtual + 1) % 4;
+  } else if (digitalRead(buttonPin) == HIGH) {
+    botaoPressionado = false;
+  }
+}
+
+void controlarMotorDC(int iniciador) {
+  if (iniciador == 1) {
+    if (potValue > 90) {
+      digitalWrite(motorTerminal1, HIGH);
+      digitalWrite(motorTerminal2, LOW);
+    } else {
+      digitalWrite(motorTerminal1, LOW);
+      digitalWrite(motorTerminal2, HIGH);
+    }
+  }
+  else{
+    digitalWrite(motorTerminal1, LOW);
+    digitalWrite(motorTerminal2, LOW);
+  }
+}
+
+
+void exibirNumero(int numero) {
+  digitalWrite(S0, bitRead(numero, 0));
+  digitalWrite(S1, bitRead(numero, 1));
+  digitalWrite(S2, bitRead(numero, 2));
+  digitalWrite(S3, bitRead(numero, 3));
+}
 
 void setup() {
   pinMode(S0, OUTPUT);
@@ -25,42 +59,15 @@ void setup() {
   pinMode(enablePin, OUTPUT);
 
   pinMode(potPin, INPUT);
-
   digitalWrite(enablePin, HIGH);
-
-  Serial.begin(9600);
 }
 
 void loop() {
-  int potValue = analogRead(potPin);
-  Serial.println(potValue);
+  // Mapeia os valores do potenciômetro de 0 a 1023 para 0 a 180
+  potValue = map(analogRead(potPin), 0, 1023, 0, 180);
 
-  delay(50);  // Adiciona um pequeno atraso para evitar leituras muito rápidas
-
-  if (potValue > 600) {
-    // Sentido horário
-    digitalWrite(motorTerminal1, LOW);
-    digitalWrite(motorTerminal2, HIGH);
-  } else {
-    // Sentido anti-horário
-    digitalWrite(motorTerminal1, HIGH);
-    digitalWrite(motorTerminal2, LOW);
-  }
-
-  if (digitalRead(buttonPin) == LOW && !botaoPressionado) {
-    botaoPressionado = true;
-    numeroAtual = (numeroAtual + 1) % 4;
-    exibirNumero(numeroAtual);
-  } else if (digitalRead(buttonPin) == HIGH) {
-    botaoPressionado = false;
-  }
-
-  // Resto do código...
-}
-
-void exibirNumero(int numero) {
-  digitalWrite(S0, bitRead(numero, 0));
-  digitalWrite(S1, bitRead(numero, 1));
-  digitalWrite(S2, bitRead(numero, 2));
-  digitalWrite(S3, bitRead(numero, 3));
+  delay(50);
+  incremetar();
+  controlarMotorDC(numeroAtual);
+  exibirNumero(numeroAtual);
 }
