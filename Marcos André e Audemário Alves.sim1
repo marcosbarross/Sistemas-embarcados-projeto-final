@@ -1,77 +1,77 @@
 <circuit version="1.0.0-SR1" rev="1402" stepSize="1000000" stepsPS="1000000" NLsteps="100000" reaStep="1000000" animate="0" >
 
-<item itemtype="Subcircuit" CircId="Uno-272" mainComp="false" Show_id="true" Show_Val="false" Pos="-252,8" rotation="0" hflip="1" vflip="1" label="Uno-272" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" Logic_Symbol="true">
+<item itemtype="Subcircuit" CircId="Uno-272" mainComp="false" Show_id="true" Show_Val="false" Pos="-344,8" rotation="0" hflip="1" vflip="1" label="Uno-272" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" Logic_Symbol="true">
 <mainCompProps itemtype="MCU" CircId="272_mega328-109" mainComp="true" Show_id="false" Show_Val="false" Pos="20,20" rotation="0" hflip="1" vflip="1" label="272_mega328-109" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" Frequency="16 MHz" Program="MarcosAndre_AudemarioAlves/build/arduino.avr.uno/MarcosAndre_AudemarioAlves.ino.with_bootloader.hex" Auto_Load="false" Rst_enabled="true" Ext_Osc="true" Wdt_enabled="false" />
 </item>
 
-<item itemtype="BcdTo7S" CircId="BcdTo7S-322" mainComp="false" Show_id="false" Show_Val="false" Pos="-116,144" rotation="0" hflip="1" vflip="1" label="BcdTo7S-322" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Inverted="false" Input_High_V="2.5 V" Input_Low_V="2.5 V" Input_Imped="1000 MΩ" Out_High_V="5 V" Out_Low_V="0 V" Out_Imped="40 Ω" Tpd_ps="10000 ps" Tr_ps="3000 ps" Tf_ps="4000 ps" />
+<item itemtype="BcdTo7S" CircId="BcdTo7S-322" mainComp="false" Show_id="false" Show_Val="false" Pos="-152,144" rotation="0" hflip="1" vflip="1" label="BcdTo7S-322" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Inverted="false" Input_High_V="2.5 V" Input_Low_V="2.5 V" Input_Imped="1000 MΩ" Out_High_V="5 V" Out_Low_V="0 V" Out_Imped="40 Ω" Tpd_ps="10000 ps" Tr_ps="3000 ps" Tf_ps="4000 ps" />
 
-<item itemtype="Seven Segment" CircId="Seven Segment-325" mainComp="false" Show_id="false" Show_Val="false" Pos="-12,144" rotation="0" hflip="1" vflip="1" label="Seven Segment-325" idLabPos="20,-44" labelrot="0" valLabPos="-16,20" valLabRot="0" NumDisplays="1 _7seg" Color="Yellow" Vertical_Pins="false" CommonCathode="true" Threshold="2.4 V" MaxCurrent="0.02 A" Resistance="1 Ω" />
+<item itemtype="Seven Segment" CircId="Seven Segment-325" mainComp="false" Show_id="false" Show_Val="false" Pos="-48,144" rotation="0" hflip="1" vflip="1" label="Seven Segment-325" idLabPos="20,-44" labelrot="0" valLabPos="-16,20" valLabRot="0" NumDisplays="1 _7seg" Color="Yellow" Vertical_Pins="false" CommonCathode="true" Threshold="2.4 V" MaxCurrent="0.02 A" Resistance="1 Ω" />
 
-<item itemtype="Resistor" CircId="Resistor-348" mainComp="false" ShowProp="Resistance" Show_id="false" Show_Val="true" Pos="-152,244" rotation="0" hflip="1" vflip="1" label="Resistor-348" idLabPos="-16,-24" labelrot="0" valLabPos="-16,6" valLabRot="0" Resistance="100 Ω" />
+<item itemtype="Resistor" CircId="Resistor-348" mainComp="false" ShowProp="Resistance" Show_id="false" Show_Val="true" Pos="-188,244" rotation="0" hflip="1" vflip="1" label="Resistor-348" idLabPos="-16,-24" labelrot="0" valLabPos="-16,6" valLabRot="0" Resistance="100 Ω" />
 
-<item itemtype="Push" CircId="Push-351" mainComp="false" Show_id="false" Show_Val="false" Pos="-156,204" rotation="0" hflip="1" vflip="1" label="Push-351" idLabPos="-12,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Norm_Close="false" Poles="1 _Poles" />
+<item itemtype="Push" CircId="Push-351" mainComp="false" Show_id="false" Show_Val="false" Pos="36,200" rotation="0" hflip="1" vflip="1" label="Push-351" idLabPos="-12,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Norm_Close="false" Poles="1 _Poles" />
 
-<item itemtype="Probe" CircId="Probe-380" mainComp="false" Show_id="false" Show_Val="true" Pos="-36,228" rotation="-45" hflip="1" vflip="1" label="Probe-380" idLabPos="16,-16" labelrot="45" valLabPos="16,0" valLabRot="45" ShowVolt="true" Threshold="2.5 V" />
+<item itemtype="Probe" CircId="Probe-380" mainComp="false" Show_id="false" Show_Val="true" Pos="-72,228" rotation="-45" hflip="1" vflip="1" label="Probe-380" idLabPos="16,-16" labelrot="45" valLabPos="16,0" valLabRot="45" ShowVolt="true" Threshold="2.5 V" />
 
-<item itemtype="DcMotor" CircId="DcMotor-397" mainComp="false" Show_id="true" Show_Val="false" Pos="-116,-4" rotation="450" hflip="1" vflip="1" label="DcMotor-397" idLabPos="-22,-48" labelrot="0" valLabPos="-14,36" valLabRot="0" RPM_Nominal="60 _RPM" Volt_Nominal="5 V" Resistance="100 Ω" />
+<item itemtype="DcMotor" CircId="DcMotor-397" mainComp="false" Show_id="true" Show_Val="false" Pos="-152,-4" rotation="720" hflip="1" vflip="1" label="DcMotor-397" idLabPos="-22,-48" labelrot="0" valLabPos="-14,36" valLabRot="0" RPM_Nominal="60 _RPM" Volt_Nominal="5 V" Resistance="100 Ω" />
 
-<item itemtype="Subcircuit" CircId="L293-403" mainComp="false" Show_id="true" Show_Val="false" Pos="-4,-40" rotation="360" hflip="1" vflip="1" label="L293-403" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" Logic_Symbol="false" />
+<item itemtype="Subcircuit" CircId="L293-403" mainComp="false" Show_id="true" Show_Val="false" Pos="-40,-40" rotation="360" hflip="1" vflip="1" label="L293-403" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" Logic_Symbol="false" />
 
-<item itemtype="Potentiometer" CircId="Potentiometer-458" mainComp="false" ShowProp="Resistance" Show_id="false" Show_Val="true" Pos="60,84" rotation="0" hflip="1" vflip="1" label="Potentiometer-458" idLabPos="-16,-40" labelrot="0" valLabPos="15,-20" valLabRot="0" Resistance="1000 Ω" Value_Ohm="513 Ω" />
+<item itemtype="Potentiometer" CircId="Potentiometer-458" mainComp="false" ShowProp="Resistance" Show_id="false" Show_Val="true" Pos="36,84" rotation="0" hflip="1" vflip="1" label="Potentiometer-458" idLabPos="-16,-40" labelrot="0" valLabPos="15,-20" valLabRot="0" Resistance="1000 Ω" Value_Ohm="289 Ω" />
 
-<item itemtype="Rail" CircId="Rail-463" mainComp="false" ShowProp="Voltage" Show_id="false" Show_Val="true" Pos="-12,84" rotation="0" hflip="1" vflip="1" label="Rail-463" idLabPos="-16,-24" labelrot="0" valLabPos="-16,8" valLabRot="0" Voltage="5 V" />
+<item itemtype="Rail" CircId="Rail-463" mainComp="false" ShowProp="Voltage" Show_id="false" Show_Val="true" Pos="-48,84" rotation="0" hflip="1" vflip="1" label="Rail-463" idLabPos="-16,-24" labelrot="0" valLabPos="-16,8" valLabRot="0" Voltage="5 V" />
 
-<item itemtype="Ground" CircId="Ground-466" mainComp="false" Show_id="false" Show_Val="false" Pos="108,116" rotation="0" hflip="1" vflip="1" label="Ground-466" idLabPos="-16,8" labelrot="0" valLabPos="-16,20" valLabRot="0" />
+<item itemtype="Ground" CircId="Ground-466" mainComp="false" Show_id="false" Show_Val="false" Pos="120,216" rotation="0" hflip="1" vflip="1" label="Ground-466" idLabPos="-16,8" labelrot="0" valLabPos="-16,20" valLabRot="0" />
 
-<item itemtype="Node" CircId="Node-354" mainComp="false" Pos="-112,244" />
+<item itemtype="Node" CircId="Node-520" mainComp="false" Pos="120,200" />
 
-<item itemtype="Connector" uid="connector-467" startpinid="BcdTo7S-322-out0" endpinid="Seven Segment-325-pin_a" pointList="-92,120,-36,120" />
+<item itemtype="Connector" uid="connector-493" startpinid="BcdTo7S-322-out0" endpinid="Seven Segment-325-pin_a" pointList="-128,120,-72,120" />
 
-<item itemtype="Connector" uid="connector-468" startpinid="BcdTo7S-322-out1" endpinid="Seven Segment-325-pin_b" pointList="-92,128,-36,128" />
+<item itemtype="Connector" uid="connector-494" startpinid="BcdTo7S-322-out1" endpinid="Seven Segment-325-pin_b" pointList="-128,128,-72,128" />
 
-<item itemtype="Connector" uid="connector-469" startpinid="BcdTo7S-322-out2" endpinid="Seven Segment-325-pin_c" pointList="-92,136,-36,136" />
+<item itemtype="Connector" uid="connector-495" startpinid="BcdTo7S-322-out2" endpinid="Seven Segment-325-pin_c" pointList="-128,136,-72,136" />
 
-<item itemtype="Connector" uid="connector-470" startpinid="BcdTo7S-322-out3" endpinid="Seven Segment-325-pin_d" pointList="-92,144,-36,144" />
+<item itemtype="Connector" uid="connector-496" startpinid="BcdTo7S-322-out3" endpinid="Seven Segment-325-pin_d" pointList="-128,144,-72,144" />
 
-<item itemtype="Connector" uid="connector-471" startpinid="BcdTo7S-322-out4" endpinid="Seven Segment-325-pin_e" pointList="-92,152,-36,152" />
+<item itemtype="Connector" uid="connector-497" startpinid="BcdTo7S-322-out4" endpinid="Seven Segment-325-pin_e" pointList="-128,152,-72,152" />
 
-<item itemtype="Connector" uid="connector-472" startpinid="BcdTo7S-322-out5" endpinid="Seven Segment-325-pin_f" pointList="-92,160,-36,160" />
+<item itemtype="Connector" uid="connector-498" startpinid="BcdTo7S-322-out5" endpinid="Seven Segment-325-pin_f" pointList="-128,160,-72,160" />
 
-<item itemtype="Connector" uid="connector-473" startpinid="BcdTo7S-322-out6" endpinid="Seven Segment-325-pin_g" pointList="-92,168,-36,168" />
+<item itemtype="Connector" uid="connector-499" startpinid="BcdTo7S-322-out6" endpinid="Seven Segment-325-pin_g" pointList="-128,168,-72,168" />
 
-<item itemtype="Connector" uid="connector-474" startpinid="Uno-272-1" endpinid="BcdTo7S-322-in3" pointList="-196,160,-140,160" />
+<item itemtype="Connector" uid="connector-500" startpinid="Uno-272-1" endpinid="BcdTo7S-322-in3" pointList="-288,160,-176,160" />
 
-<item itemtype="Connector" uid="connector-475" startpinid="Uno-272-2" endpinid="BcdTo7S-322-in2" pointList="-196,152,-140,152" />
+<item itemtype="Connector" uid="connector-501" startpinid="Uno-272-2" endpinid="BcdTo7S-322-in2" pointList="-288,152,-176,152" />
 
-<item itemtype="Connector" uid="connector-476" startpinid="Uno-272-3" endpinid="BcdTo7S-322-in1" pointList="-196,144,-140,144" />
+<item itemtype="Connector" uid="connector-502" startpinid="Uno-272-3" endpinid="BcdTo7S-322-in1" pointList="-288,144,-176,144" />
 
-<item itemtype="Connector" uid="connector-477" startpinid="Uno-272-4" endpinid="BcdTo7S-322-in0" pointList="-196,136,-140,136" />
+<item itemtype="Connector" uid="connector-503" startpinid="Uno-272-4" endpinid="BcdTo7S-322-in0" pointList="-288,136,-176,136" />
 
-<item itemtype="Connector" uid="connector-478" startpinid="Uno-272-GND2" endpinid="Resistor-348-lPin" pointList="-260,168,-288,168,-288,244,-168,244" />
+<item itemtype="Connector" uid="connector-504" startpinid="Uno-272-GND2" endpinid="Resistor-348-lPin" pointList="-352,168,-352,244,-204,244" />
 
-<item itemtype="Connector" uid="connector-479" startpinid="Resistor-348-rPin" endpinid="Node-354-0" pointList="-136,244,-112,244" />
+<item itemtype="Connector" uid="connector-505" startpinid="L293-403-1Y" endpinid="DcMotor-397-lPin" pointList="-48,-16,-100,-16,-100,-60,-192,-60,-192,-4" />
 
-<item itemtype="Connector" uid="connector-480" startpinid="Uno-272-0" endpinid="Push-351-pinP0" pointList="-196,168,-196,204,-172,204" />
+<item itemtype="Connector" uid="connector-506" startpinid="L293-403-2Y" endpinid="DcMotor-397-rPin" pointList="-48,8,-100,8,-100,52,-112,52,-112,-4" />
 
-<item itemtype="Connector" uid="connector-481" startpinid="Push-351-switch0pinN" endpinid="Node-354-1" pointList="-140,204,-112,204,-112,244" />
+<item itemtype="Connector" uid="connector-507" startpinid="L293-403-1A" endpinid="Uno-272-8" pointList="-48,-24,-88,-24,-88,-72,-208,-72,-208,104,-288,104" />
 
-<item itemtype="Connector" uid="connector-482" startpinid="L293-403-1Y" endpinid="DcMotor-397-lPin" pointList="-12,-16,-64,-16,-64,-60,-116,-60,-116,-44" />
+<item itemtype="Connector" uid="connector-508" startpinid="L293-403-12EN" endpinid="Uno-272-9" pointList="-48,-32,-80,-32,-80,-80,-220,-80,-220,96,-288,96" />
 
-<item itemtype="Connector" uid="connector-483" startpinid="L293-403-2Y" endpinid="DcMotor-397-rPin" pointList="-12,8,-64,8,-64,52,-116,52,-116,36" />
+<item itemtype="Connector" uid="connector-509" startpinid="L293-403-2A" endpinid="Uno-272-5" pointList="-48,16,-76,16,-76,96,-192,96,-192,128,-288,128" />
 
-<item itemtype="Connector" uid="connector-484" startpinid="L293-403-1A" endpinid="Uno-272-8" pointList="-12,-24,-52,-24,-52,-72,-172,-72,-172,104,-196,104" />
+<item itemtype="Connector" uid="connector-510" startpinid="Potentiometer-458-PinM" endpinid="Uno-272-A0" pointList="36,100,36,112,-108,112,-108,56,-288,56" />
 
-<item itemtype="Connector" uid="connector-485" startpinid="L293-403-12EN" endpinid="Uno-272-9" pointList="-12,-32,-44,-32,-44,-80,-184,-80,-184,96,-196,96" />
+<item itemtype="Connector" uid="connector-511" startpinid="Rail-463-outnod" endpinid="Potentiometer-458-PinA" pointList="-32,84,20,84" />
 
-<item itemtype="Connector" uid="connector-486" startpinid="L293-403-2A" endpinid="Uno-272-5" pointList="-12,16,-40,16,-40,96,-156,96,-156,128,-196,128" />
+<item itemtype="Connector" uid="connector-512" startpinid="Potentiometer-458-PinB" endpinid="Node-520-0" pointList="52,84,120,84,120,200" />
 
-<item itemtype="Connector" uid="connector-487" startpinid="Potentiometer-458-PinM" endpinid="Uno-272-A0" pointList="60,100,60,112,-72,112,-72,56,-196,56" />
+<item itemtype="Connector" uid="connector-513" startpinid="Resistor-348-rPin" endpinid="Seven Segment-325-pin_commona" pointList="-172,244,-40,244,-40,176" />
 
-<item itemtype="Connector" uid="connector-488" startpinid="Rail-463-outnod" endpinid="Potentiometer-458-PinA" pointList="4,84,44,84" />
+<item itemtype="Connector" uid="Connector-517" startpinid="Uno-272-0" endpinid="Push-351-pinP0" pointList="-288,168,-288,200,20,200" />
 
-<item itemtype="Connector" uid="connector-489" startpinid="Node-354-2" endpinid="Seven Segment-325-pin_commona" pointList="-112,244,-4,244,-4,176" />
+<item itemtype="Connector" uid="Connector-519" startpinid="Push-351-switch0pinN" endpinid="Node-520-1" pointList="52,200,120,200" />
 
-<item itemtype="Connector" uid="connector-490" startpinid="Potentiometer-458-PinB" endpinid="Ground-466-Gnd" pointList="76,84,108,84,108,100" />
+<item itemtype="Connector" uid="Connector-521" startpinid="Node-520-2" endpinid="Ground-466-Gnd" pointList="120,200,120,200" />
 
 </circuit>
