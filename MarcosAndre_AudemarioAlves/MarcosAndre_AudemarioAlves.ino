@@ -1,5 +1,5 @@
 #include <Servo.h>
-#include <Stepper.h>
+#include <AccelStepper.h>
 
 // Definição dos pinos para controle do display de 7 segmentos
 const int S0 = 4;
@@ -19,14 +19,7 @@ const int potPin = A0;
 const int servoPin = A5;
 
 // Configuração do motor de passo
-const int passosPorRevolucao = 50;
-const int stepperIn1 = 13;
-const int stepperIn2 = 12;
-const int stepperIn3 = 11;
-const int stepperIn4 = 10;
-
-// Criação do objeto Stepper para controle do motor de passo
-Stepper stepperMotor(passosPorRevolucao, stepperIn1, stepperIn2, stepperIn3, stepperIn4);
+AccelStepper stepperMotor(AccelStepper::FULL4WIRE, 13, 11, 12, 10); // Pinos padrão para FULL4WIRE
 
 // Variáveis globais
 int potValue;
@@ -38,7 +31,7 @@ Servo servoMotor;
 void incremetar() {
   if (digitalRead(buttonPin) == LOW && !botaoPressionado) {
     botaoPressionado = true;
-    numeroAtual = (numeroAtual + 1) % 5;  // Ajusta o número de funções conforme necessário
+    numeroAtual = (numeroAtual + 1) % 4;  // Ajusta o número de funções conforme necessário
   } else if (digitalRead(buttonPin) == HIGH) {
     botaoPressionado = false;
   }
@@ -48,11 +41,11 @@ void incremetar() {
 void controlarMotorDC(int iniciador) {
   if (iniciador == 1) {
     if (potValue > 90) {
-      digitalWrite(motorTerminal1, LOW);  // Invertendo a direção
-      digitalWrite(motorTerminal2, HIGH); 
-    } else {
       digitalWrite(motorTerminal1, HIGH);
       digitalWrite(motorTerminal2, LOW);
+    } else {
+      digitalWrite(motorTerminal1, LOW);
+      digitalWrite(motorTerminal2, HIGH);
     }
   } else {
     digitalWrite(motorTerminal1, LOW);
@@ -72,14 +65,17 @@ void controlarServoMotor(int iniciador) {
 // Função para controlar o motor de passo baseado no potenciômetro
 void controlarMotorPasso(int iniciador) {
   if (iniciador == 3) {
-    // Mapeia os valores do potenciômetro para o número de passos
-    int steps = map(potValue, 0, 180, -passosPorRevolucao, passosPorRevolucao);
+    // Define a velocidade do motor de passo com base no valor do potenciômetro
+    int velocidade = map(potValue, 0, 180, 0, 1000);
+    stepperMotor.setSpeed(velocidade);
 
-    // Configura a velocidade do motor de passo
-    stepperMotor.setSpeed(10); 
-
-    // Rotaciona o motor de passo
-    stepperMotor.step(steps);
+    // Verifica a direção com base na posição do potenciômetro
+    if (potValue > 90) {
+      stepperMotor.runSpeed();
+    } else {
+      stepperMotor.setSpeed(-velocidade);
+      stepperMotor.runSpeed();
+    }
   }
 }
 
@@ -111,7 +107,8 @@ void setup() {
   // Anexa o servo motor ao pino especificado
   servoMotor.attach(servoPin);
 
-  // Configuração do motor de passo com a biblioteca Stepper
+  // Configuração do motor de passo com a biblioteca AccelStepper
+  stepperMotor.setMaxSpeed(1000.0);
 }
 
 void loop() {
