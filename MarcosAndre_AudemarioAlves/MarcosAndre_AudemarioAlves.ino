@@ -53,18 +53,9 @@ void controlarMotorDC(int iniciador) {
   }
 }
 
-// Função para controlar o servo motor baseado no potenciômetro
-void controlarServoMotor(int iniciador) {
-  if (iniciador == 2) {
-    // Define o ângulo do servo motor com base no valor do potenciômetro
-    int servoAngle = 180 - potValue;
-    servoMotor.write(servoAngle);
-  }
-}
-
 // Função para controlar o motor de passo baseado no potenciômetro
 void controlarMotorPasso(int iniciador) {
-  if (iniciador == 3) {
+  if (iniciador == 2) {
     // Define a velocidade do motor de passo com base no valor do potenciômetro
     int velocidade = map(potValue, 0, 180, 0, 1000);
     stepperMotor.setSpeed(velocidade);
@@ -78,6 +69,17 @@ void controlarMotorPasso(int iniciador) {
     }
   }
 }
+
+// Função para controlar o servo motor baseado no potenciômetro
+void controlarServoMotor(int iniciador) {
+  if (iniciador == 3) {
+    // Define o ângulo do servo motor com base no valor do potenciômetro
+    int servoAngle = 180 - potValue;
+    servoMotor.write(servoAngle);
+  }
+}
+
+
 
 // Função para exibir o número no display de 7 segmentos
 void exibirNumero(int numero) {
@@ -121,7 +123,7 @@ void loop() {
   // Chama as funções para controlar os dispositivos
   incremetar();
   controlarMotorDC(numeroAtual);
-  controlarServoMotor(numeroAtual);
   controlarMotorPasso(numeroAtual);
+  controlarServoMotor(numeroAtual);
   exibirNumero(numeroAtual);
 }

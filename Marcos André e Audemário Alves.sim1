@@ -14,7 +14,7 @@
 
 <item itemtype="Subcircuit" CircId="L293-403" mainComp="false" Show_id="true" Show_Val="false" Pos="-120,-164" rotation="360" hflip="1" vflip="1" label="L293-403" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" Logic_Symbol="false" />
 
-<item itemtype="Potentiometer" CircId="Potentiometer-458" mainComp="false" ShowProp="Resistance" Show_id="false" Show_Val="true" Pos="-368,4" rotation="0" hflip="1" vflip="1" label="Potentiometer-458" idLabPos="-16,-40" labelrot="0" valLabPos="15,-20" valLabRot="0" Resistance="1000 Ω" Value_Ohm="443 Ω" />
+<item itemtype="Potentiometer" CircId="Potentiometer-458" mainComp="false" ShowProp="Resistance" Show_id="false" Show_Val="true" Pos="-368,4" rotation="0" hflip="1" vflip="1" label="Potentiometer-458" idLabPos="-16,-40" labelrot="0" valLabPos="15,-20" valLabRot="0" Resistance="1000 Ω" Value_Ohm="699 Ω" />
 
 <item itemtype="Rail" CircId="Rail-463" mainComp="false" ShowProp="Voltage" Show_id="false" Show_Val="true" Pos="-428,4" rotation="0" hflip="1" vflip="1" label="Rail-463" idLabPos="-16,-24" labelrot="0" valLabPos="-16,8" valLabRot="0" Voltage="5 V" />
 
@@ -98,34 +98,34 @@
 
 <item itemtype="Connector" uid="connector-1199" startpinid="ResistorDip-504-resistor1-ePin2" endpinid="Uno-272-12" pointList="-504,-352,-536,-352,-536,-132,-544,-132" />
 
-<item itemtype="Connector" uid="connector-1201" startpinid="Servo-567-in1" endpinid="Ground-987-Gnd" pointList="-440,-144,-440,-140" />
+<item itemtype="Connector" uid="connector-1200" startpinid="Servo-567-in1" endpinid="Ground-987-Gnd" pointList="-440,-144,-440,-140" />
 
-<item itemtype="Connector" uid="connector-1202" startpinid="ResistorDip-504-resistor0-ePin1" endpinid="ULN2803-1148-In1" pointList="-472,-360,-448,-360" />
+<item itemtype="Connector" uid="connector-1201" startpinid="ResistorDip-504-resistor0-ePin1" endpinid="ULN2803-1148-In1" pointList="-472,-360,-448,-360" />
 
-<item itemtype="Connector" uid="connector-1203" startpinid="ResistorDip-504-resistor1-ePin3" endpinid="ULN2803-1148-In2" pointList="-472,-352,-448,-352" />
+<item itemtype="Connector" uid="connector-1202" startpinid="ResistorDip-504-resistor1-ePin3" endpinid="ULN2803-1148-In2" pointList="-472,-352,-448,-352" />
 
-<item itemtype="Connector" uid="connector-1204" startpinid="ResistorDip-504-resistor2-ePin5" endpinid="ULN2803-1148-In3" pointList="-472,-344,-448,-344" />
+<item itemtype="Connector" uid="connector-1203" startpinid="ResistorDip-504-resistor2-ePin5" endpinid="ULN2803-1148-In3" pointList="-472,-344,-448,-344" />
 
-<item itemtype="Connector" uid="connector-1205" startpinid="ResistorDip-504-resistor3-ePin7" endpinid="ULN2803-1148-In4" pointList="-472,-336,-448,-336" />
+<item itemtype="Connector" uid="connector-1204" startpinid="ResistorDip-504-resistor3-ePin7" endpinid="ULN2803-1148-In4" pointList="-472,-336,-448,-336" />
 
-<item itemtype="Connector" uid="connector-1206" startpinid="ULN2803-1148-Out1" endpinid="Stepper-489-PinA1" pointList="-400,-360,-356,-360,-356,-380,-304,-380" />
+<item itemtype="Connector" uid="connector-1205" startpinid="ULN2803-1148-Out1" endpinid="Stepper-489-PinA1" pointList="-400,-360,-356,-360,-356,-380,-304,-380" />
 
-<item itemtype="Connector" uid="connector-1207" startpinid="ULN2803-1148-Out2" endpinid="Stepper-489-PinB1" pointList="-400,-352,-348,-352,-348,-364,-304,-364" />
+<item itemtype="Connector" uid="connector-1206" startpinid="ULN2803-1148-Out2" endpinid="Stepper-489-PinB1" pointList="-400,-352,-348,-352,-348,-364,-304,-364" />
 
-<item itemtype="Connector" uid="connector-1208" startpinid="ULN2803-1148-Out3" endpinid="Stepper-489-PinA2" pointList="-400,-344,-348,-344,-348,-332,-304,-332" />
+<item itemtype="Connector" uid="connector-1207" startpinid="ULN2803-1148-Out3" endpinid="Stepper-489-PinA2" pointList="-400,-344,-348,-344,-348,-332,-304,-332" />
 
-<item itemtype="Connector" uid="connector-1209" startpinid="ULN2803-1148-Out4" endpinid="Stepper-489-PinB2" pointList="-400,-336,-356,-336,-356,-316,-304,-316" />
+<item itemtype="Connector" uid="connector-1208" startpinid="ULN2803-1148-Out4" endpinid="Stepper-489-PinB2" pointList="-400,-336,-356,-336,-356,-316,-304,-316" />
 
-<item itemtype="Connector" uid="connector-1210" startpinid="Rail-495-outnod" endpinid="Node-1171-0" pointList="-332,-256,-332,-256" />
+<item itemtype="Connector" uid="connector-1209" startpinid="Rail-495-outnod" endpinid="Node-1171-0" pointList="-332,-256,-332,-256" />
 
-<item itemtype="Connector" uid="connector-1211" startpinid="ULN2803-1148-Com" endpinid="Node-1169-1" pointList="-400,-296,-332,-296" />
+<item itemtype="Connector" uid="connector-1210" startpinid="ULN2803-1148-Com" endpinid="Node-1169-1" pointList="-400,-296,-332,-296" />
 
-<item itemtype="Connector" uid="connector-1212" startpinid="Node-1169-2" endpinid="Stepper-489-PinCo" pointList="-332,-296,-332,-348,-304,-348" />
+<item itemtype="Connector" uid="connector-1211" startpinid="Node-1169-2" endpinid="Stepper-489-PinCo" pointList="-332,-296,-332,-348,-304,-348" />
 
-<item itemtype="Connector" uid="connector-1213" startpinid="Node-1171-2" endpinid="Node-1169-0" pointList="-332,-256,-332,-296" />
+<item itemtype="Connector" uid="connector-1212" startpinid="Node-1171-2" endpinid="Node-1169-0" pointList="-332,-256,-332,-296" />
 
-<item itemtype="Connector" uid="connector-1214" startpinid="Node-1171-1" endpinid="Servo-567-in0" pointList="-332,-256,-492,-256,-492,-128,-456,-128,-456,-144" />
+<item itemtype="Connector" uid="connector-1213" startpinid="Node-1171-1" endpinid="Servo-567-in0" pointList="-332,-256,-492,-256,-492,-128,-456,-128,-456,-144" />
 
-<item itemtype="Connector" uid="Connector-1219" startpinid="ResistorDip-504-resistor0-ePin0" endpinid="Uno-272-13" pointList="-504,-360,-540,-360,-540,-140,-544,-140" />
+<item itemtype="Connector" uid="connector-1214" startpinid="ResistorDip-504-resistor0-ePin0" endpinid="Uno-272-13" pointList="-504,-360,-540,-360,-540,-140,-544,-140" />
 
 </circuit>
